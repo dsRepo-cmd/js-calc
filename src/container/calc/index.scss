@@ -1,7 +1,7 @@
-$primary-color: #3b6279;
+$primary-color: #364249;
 $secondary-color: #f1faee;
-$button-color: #f1faee;
-$button-hover-color: #ddd;
+$button-color: #d1d6cf;
+$button-hover-color: #8d8d8d;
 $display-text-color: #364249;
 body {
   background-color: #112d49;
@@ -23,10 +23,15 @@ main {
   flex-direction: column;
   gap: 24px;
   width: 320px;
+
+  &__title {
+    color: $button-color;
+  }
 }
 
 .display {
   display: inline-block;
+  border-radius: 3px;
   height: 60px;
   padding: 10px;
   background-color: $secondary-color;

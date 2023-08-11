@@ -1,6 +1,6 @@
 class Calc {
   static #value = ''
-  static #NAME = 'calc'
+  static #NAME = 'Calc'
   static #isDot = false
 
   static add = (newValue) => {
@@ -13,7 +13,7 @@ class Calc {
       }
     }
 
-    console.log(this.#value)
+    // console.log(this.#value)
 
     this.#value = this.#value.concat(newValue)
     this.#output()
@@ -23,6 +23,7 @@ class Calc {
     this.#save()
     console.log(this.#value)
     window.output.innerHTML = this.#value
+    window.title.innerHTML = this.#NAME
   }
 
   static dot = () => {
@@ -84,8 +85,6 @@ class Calc {
   }
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  Calc.init()
-})
+Calc.init()
 
 window.calc = Calc
